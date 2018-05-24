@@ -2,6 +2,11 @@
  * Common settings
 /* ---------------------------------------------- */
 
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/Proxima Nova Alt Regular-webfont.woff') format('woff'),
+        url('../fonts/Proxima Nova Alt Regular-webfont.ttf') format('truetype');
+}
 html, body {
 	margin: 0;
 	padding: 0;
@@ -44,11 +49,13 @@ a {
 /* ---------------------------------------------- */
 
 header {
-    height: 120vh;
+    min-height: 120vh;
     width: 100%;
     background: url(../imgs/header_bg.jpg) no-repeat center;
     background-size: cover; 
-
+    border-bottom: 0.625em solid white;
+    box-shadow: 0 8px 9px rgba(0,0,0,.17);
+    
     #topSection {
         background-color: rgba(86, 83, 76, .53);
         //height: 4.375em;
@@ -62,7 +69,7 @@ header {
         
             #logo {
                 display: flex;
-                margin-top: 15px;
+                margin-top: 0.9375em;
 
                 a {
                     display: block;
@@ -113,7 +120,67 @@ header {
             }
         }
     }
+
+
+    #into {
+        .content-wr {
+            flex-direction: column;
+            text-align: center;
+            padding: 0 10px;
+        
+            h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 92px;
+                font-weight: 700;
+                margin-top: 187px;
+                padding-bottom: 63px;
+                text-align: center;
+                letter-spacing: 6px;
+                color: #ffffff;
+                text-shadow: 0 1px 0 #3d3029;
+            }
+
+            p {
+                font-family: 'proxima-nova', sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 36px;
+                margin: 0 auto 53px;
+                text-align: center;
+                color: #ffffff;
+                text-shadow: 0 1px 0 #3d3029;
+                letter-spacing: 1.5px;
+            }
+            a {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 24px;
+                display: block;
+                width: 200px;
+                min-height: 50px;
+                margin: 0 auto;
+                padding: 12px;
+                animation: focus 3s;
+                text-align: center;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                color: #ffffff;
+                border: 1px dashed #9e9c93;
+                background-color: rgba(86, 83, 76, .53);
+            }
+            #rotator {  
+                display: block;
+                margin: 0 auto;
+                width: 6.625em;
+                height: 6.625em;
+                transform: translate(0%, 90%);
+                background: url('../imgs/header_dot.png'), radial-gradient(circle at center, white 42px, rgba(0,0,0,.17) 43px, transparent 50px);    
+            }
+        }     
+    }
 }
+
+
 
 @media only screen and (max-width: 700px) {
 	header #topSection .content-wr nav div a {
@@ -132,4 +199,24 @@ header {
         width: .5em;
         padding: 0.5em 0;
     }
+
+    header #into .content-wr h1 {
+        font-size: 46px;
+        margin-top: 90px;
+        padding-bottom: 33px;
+    }
+
+    header #into .content-wr p {
+        font-size: 18px;
+    }  
 }	
+
+@media only screen and (max-width: 1024px) {
+    header #into .content-wr #rotator {
+        display: none;
+    }
+    header #into .content-wr a {
+        margin: 1em auto;
+    } 
+}
+
