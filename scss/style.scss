@@ -51,7 +51,7 @@ a {
 header {
     min-height: 120vh;
     width: 100%;
-    background: url(../imgs/header_bg.jpg) no-repeat center;
+    background: url(../imgs/header_bg.jpg) no-repeat center fixed;
     background-size: cover; 
     border-bottom: 0.625em solid white;
     box-shadow: 0 8px 9px rgba(0,0,0,.17);
@@ -429,3 +429,40 @@ header {
         min-width: 100%;
     }
 }
+
+/* ---------------------------------------------- /*
+ * Tasty Pancakes Cakes Section
+/* ---------------------------------------------- */
+#tastyPancakes {
+    min-height: 47.5em;
+    width: 100%;
+    padding-top: 140px;
+    padding-bottom: 108px;
+    background: #e8eae6 url('../imgs/bg_tastyPancakes.jpg') no-repeat center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+
+    .content-wr {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .pancakesCard {
+            position: relative;
+            display: flex;
+            width: 916px;
+            margin: 0 auto;
+            
+            background: #fff;
+            box-shadow: 6px 6px 13px rgba(0,0,0,.47);
+
+            .pancakesImage {
+                width: 400px;
+                height: 512px;
+                background: url('../imgs/pancakes.png');
+                background-size: cover;
+                
+            }
+        }
+    }
+}
+
