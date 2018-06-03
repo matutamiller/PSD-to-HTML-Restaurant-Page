@@ -436,25 +436,25 @@ header {
 #tastyPancakes {
     min-height: 47.5em;
     width: 100%;
-    padding-top: 140px;
-    padding-bottom: 108px;
+    padding: 100px 0 80px 0;
     background: #e8eae6 url('../imgs/bg_tastyPancakes.jpg') no-repeat center fixed;
     background-size: cover;
     box-sizing: border-box;
 
     .content-wr {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: flex;
+	    justify-content: center;
+	    max-width: 950px;
+	    margin: 0 auto;
+	    flex-wrap: nowrap;
+	    border-bottom-left-radius: 80px;
 
         .pancakesCard {
-            position: relative;
             display: flex;
-            width: 916px;
-            margin: 0 auto;
+	        align-items: center;
+	        position: relative;
             
-            background: #fff;
-            box-shadow: 6px 6px 13px rgba(0,0,0,.47);
-
+            
             .pancakesImage {
                 width: 400px;
                 height: 512px;
@@ -462,7 +462,156 @@ header {
                 background-size: cover;
                 
             }
+            .rating {
+                font-size: 2em;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 30px;
+                color: #fff;
+                top: 35%;
+            
+            
+                &.rating > span:hover:before, 
+                &.rating > span:hover ~ span:before {
+                    content: "\2605";
+                    position: absolute;
+                }
+            }
+            .fold{
+                position: absolute;
+                left: -8px;
+                bottom: -7px;
+            }
         }
+
+
+        #pancakesText {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            width: 100%;
+
+
+            .pancakesTitle {
+                margin-left: -120px;
+                
+                .sectionTitle {
+	                font-size: 3em;
+                    margin-bottom: 0;
+                    letter-spacing: 2px;
+                    color: #56534c;
+                    
+                }  
+                .paragTitle {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 2px;
+                    color: #a47d5e;
+                    font-weight: 700;
+                    
+                }
+            }
+            p {
+                font-family: 'Proxima Nova', Georgia, sans-serif;
+                letter-spacing: 2px;
+                width:78%;
+                z-index: 2;
+            }   
+
+            .carousel{
+                display: flex;
+                align-items: center;
+                max-width: 450px;
+                margin: 0 auto;
+                
+                span{
+                    border: solid 2px #56534c;
+                    border-radius: 50%;
+                    padding-top: 1px;    
+                    width: 30px;
+                    height: 27px;
+                    text-align: center;
+                    align-items: center;
+                    z-index: 2;
+                    margin: 0 auto;          
+                }
+        
+                .slides{
+                    width:100%;
+                    display: flex;
+                    overflow: hidden;
+                    
+                    img {
+                        margin: 0 20px;
+                        transition: transform 0.5s ease;
+                        z-index: 2;
+                        height: 90px;
+                    }
+                }
+            }    
+        }
+        .bottom_bg{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+        }
+        
+        .readyIn {
+            position: absolute;
+            background: url(../imgs/readyIn_bg.png) no-repeat center center;
+            background-size: cover;
+            max-width: 200px;
+            max-height: 200px;
+            align-self: flex-end;
+            top:-20px;
+            right: -20px;
+            text-align: center;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30px 40px;
+            box-shadow: 0 0 60px rgba(0,0,0,0.2);
+            line-height: 30px;
+           
+            
+            span {
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: bold;
+                color: #a47d5e;
+                font-family: 'Alegreya', serif;
+                letter-spacing: 2px;
+                width: 90px;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            h3 {
+                color: #dfc691;
+                font-family: 'Alegreya', serif;
+                font-size: 6em;
+                font-weight: bold;
+                margin: 20px 0;
+                letter-spacing: 3px;
+                
+            }
+            
+             p { 
+                font-size: 18px;
+                margin: 30px auto;
+                align-self: center;
+                opacity: 0.58;
+                color: #979285;
+            }
+        }
+      
     }
 }
+
 
