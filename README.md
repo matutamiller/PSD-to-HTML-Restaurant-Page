@@ -6,4 +6,6 @@ Landing created using html5, scss, css3 flexboxes, responsive web design
 v1.0 - I have created common settings and navigation.
        I have added header. 
        
-v.1.1 - I have added the 'Art of Cake' section with media queries for rwd.       
+v.1.1 - I have added the 'Art of Cake' section with media queries for rwd. 
+
+v.1.1 - I have created the 'Tasty Pancakes' section. 
