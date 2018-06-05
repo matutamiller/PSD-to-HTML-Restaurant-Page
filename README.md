@@ -8,4 +8,6 @@ v1.0 - I have created common settings and navigation.
        
 v.1.1 - I have added the 'Art of Cake' section with media queries for rwd. 
 
-v.1.1 - I have created the 'Tasty Pancakes' section. 
+v.1.2 - I have created the 'Tasty Pancakes' section. 
+
+v.1.3 - I have added media queries for rwd to the 'Tasty Pancakes' section.
