@@ -58,7 +58,6 @@ header {
     
     #topSection {
         background-color: rgba(86, 83, 76, .53);
-        //height: 4.375em;
         min-height: 10vh;
     
 
@@ -108,7 +107,7 @@ header {
             }
 
             #socials {
-                padding: 1.5625em 0; 
+                padding: 1.5625em; 
                 
                 a, i {
                     display: inline-block;
@@ -202,7 +201,11 @@ header {
       transform: translate(0%, 90%) rotate(0deg);
     }
   }
-
+@media only screen and (max-width: 400px) {
+    header #topSection .content-wr #socials {
+        display:none;
+    }
+}
 @media only screen and (max-width: 700px) {
 	header #topSection .content-wr nav div a {
         font-size: 12px;
@@ -431,7 +434,7 @@ header {
 }
 
 /* ---------------------------------------------- /*
- * Tasty Pancakes Cakes Section
+ * Tasty Pancakes Section
 /* ---------------------------------------------- */
 #tastyPancakes {
     min-height: 47.5em;
@@ -449,10 +452,11 @@ header {
 	    flex-wrap: nowrap;
 	    border-bottom-left-radius: 80px;
 
-        .pancakesCard {
+        #pancakesCard {
             display: flex;
 	        align-items: center;
-	        position: relative;
+            position: relative;
+            width: 100%;
             
             
             .pancakesImage {
@@ -460,7 +464,6 @@ header {
                 height: 512px;
                 background: url('../imgs/pancakes.png');
                 background-size: cover;
-                
             }
             .rating {
                 font-size: 2em;
@@ -493,7 +496,7 @@ header {
             justify-content: space-around;
             align-items: center;
             background-color: #fff;
-            width: 100%;
+            max-width: 100%;
 
 
             .pancakesTitle {
@@ -519,7 +522,7 @@ header {
             p {
                 font-family: 'Proxima Nova', Georgia, sans-serif;
                 letter-spacing: 2px;
-                width:78%;
+                max-width:78%;
                 z-index: 2;
             }   
 
@@ -603,16 +606,48 @@ header {
                 
             }
             
-             p { 
+            p { 
                 font-size: 18px;
                 margin: 0 auto;
                 align-self: center;
                 opacity: 0.58;
                 color: #979285;
             }
-        }
-      
+        } 
     }
 }
 
-
+@media only screen and (max-width: 1020px) {    
+    #tastyPancakes .content-wr {
+        flex-wrap: wrap;
+        padding: 1em;
+    }
+    #tastyPancakes .content-wr #pancakesCard .pancakesImage {
+        min-width: 100%;
+        background: url('../imgs/topdish.jpg');
+        background-size: cover;
+        padding: 1em;   
+    }
+    #tastyPancakes .content-wr #pancakesCard .fold {    
+        display: none;
+    }
+    #tastyPancakes .content-wr .readyIn {
+        position: relative;
+        margin: auto;
+        top:15%;
+        right: 0;
+        min-width: 40%;   
+    }
+    #tastyPancakes .content-wr #pancakesText .pancakesTitle .sectionTitle {
+        font-size: 2.5em;
+        text-align: center;    
+    }
+    #tastyPancakes .content-wr #pancakesText .pancakesTitle, 
+    #tastyPancakes .content-wr #pancakesText .pancakesTitle .paragTitle  {
+        margin: 0 auto;   
+    }
+    #tastyPancakes .content-wr #pancakesText .carousel {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
