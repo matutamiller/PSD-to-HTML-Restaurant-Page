@@ -619,7 +619,7 @@ header {
 
 @media only screen and (max-width: 1020px) {    
     #tastyPancakes .content-wr {
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         padding: 1em;
     }
     #tastyPancakes .content-wr #pancakesCard .pancakesImage {
@@ -651,3 +651,136 @@ header {
         margin: 0 auto;
     }
 }
+
+/* ---------------------------------------------- /*
+ * Breakfast Section
+/* ---------------------------------------------- */
+#breakfast {
+    min-height: 47.5em;
+    width: 100%;
+    background: url('../imgs/bg_breakfast.png') no-repeat center fixed;
+    background-size: cover;
+    box-sizing: border-box; 
+    padding: 80px 0;
+
+
+    .content-wr {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-content: space-between;
+
+        .breakfastText {
+            width: 50%;
+            font-family: 'Alegreya', serif;
+            flex-direction: column;
+	        justify-content: space-around;
+            text-align: center;
+            line-height: 30px;
+            
+            
+            .sectionTitle {
+                font-size: 3em;
+                line-height: 0px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: #ffffff;
+            }
+
+            .paragTitle {    
+                text-transform: uppercase;
+                font-size: 16px;
+                letter-spacing: 1px;
+                font-weight: 700;
+	            color: #c8a593;
+                margin: 0;
+                   
+            }
+
+            h4 {
+                color:#fff;
+                margin: 10px 0 0 0;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 10px;
+            }
+
+            p {
+                font-family: 'Proxima Nova', Georgia, sans-serif;
+                color: #c2beba;
+                margin-bottom: 20px;
+                font-size: 1em;
+                font-weight: 400;
+
+            }
+            span {
+                font-size: 2em;
+                color: #dfc691;
+                font-weight: 400;
+            }
+        }
+        
+        .breakfastCard {
+            margin-top: 2em;
+            text-align: center;
+            width: 50%;
+
+            .card {
+                height: 595px;
+                max-width: 450px;
+                background: url(../imgs/breakfastCard.png) no-repeat center;
+                background-size: cover;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: 0 auto;
+
+                h2 {
+                    font-family: 'Alegreya', serif;
+                    color: #56534c;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 55px;
+                    max-width: 300px;
+                    padding-top: 200px;
+                    margin: 0 auto;
+                }
+
+                p {
+                    color: #56534c;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    font-family: 'Proxima Nova', Georgia, sans-serif;
+                    max-width: 290px;
+                    margin: 30px auto;
+                }
+
+                button{
+                    font-family: 'Alegreya', serif;
+                    font-size: 1.4em;
+                    color: #a47d5e;
+                    padding: 15px 70px;
+                    margin: 0 auto;
+                    background-color: rgba(0,0,0,0);
+                    border: solid 1px #a47d5e;
+                    cursor: pointer;
+	                transition: transform 0.5s ease;
+                    outline: none;
+                    
+                    &:hover{
+                        transform: translateY(-5px);
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #breakfast .content-wr .breakfastCard,
+    #breakfast .content-wr .breakfastText {
+        min-width: 100%;
+    }
+} 
