@@ -784,3 +784,93 @@ header {
         min-width: 100%;
     }
 } 
+
+/* ---------------------------------------------- /*
+ * Sandwich Section
+/* ---------------------------------------------- */
+#sandwich {
+    padding: 20px 0 20px 0;
+    background-color: #f3f1e9;
+    min-height: 47.5em;
+    width: 100%;
+
+    .content-wr {
+
+
+
+        .sandwichHeadLine{
+            position: relative;
+            text-align: center;
+            flex-direction: column;
+            margin: 0 auto;
+
+            .sandwichBG {
+                margin: 0 auto;
+            }
+
+            .sandwichTitle {
+
+                margin: -3em auto 0 auto;
+                text-align: center;
+                
+
+                h2{
+                    font-size: 3em;
+                    margin:0;
+                    color: #56534c;
+                   
+                }
+                p{
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: #a47d5e;
+                    font-weight: 800;
+                    font-size: 14px;
+                    line-height: 0px;
+                }
+            }
+        }
+
+        .thumbsCard {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            text-align: center;
+
+            .thumbs {
+                width: 25%;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-items: center;
+
+                .thumbsDetail {
+                   width: 300px;
+                   margin-bottom: 30px;
+
+                    h3 {
+                        font-family: 'Alegreya', serif;
+                        color: #a47d5e;
+                        font-size: 30px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        margin: 5px 0;
+                    }
+
+                    p{
+                        color: #56534c;
+                        font-family: 'Proxima Nova', Georgia, sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        width: 300px;
+                    }
+                }
+            }
+            .sandwichCard {
+                width: 75%;
+            }
+        }
+    }
+
+}
