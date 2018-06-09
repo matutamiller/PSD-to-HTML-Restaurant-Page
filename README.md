@@ -13,3 +13,5 @@ v.1.2 - I have created the 'Tasty Pancakes' section.
 v.1.3 - I have added media queries for rwd to the 'Tasty Pancakes' section.
 
 v.1.4 - I have created the 'Breakfast' section. 
+
+v.1.5 - I have created 'Sandwich' section and footer with media queries for rwd.
