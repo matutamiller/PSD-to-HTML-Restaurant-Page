@@ -200,7 +200,15 @@ header {
     55% {
       transform: translate(0%, 90%) rotate(0deg);
     }
-  }
+}
+@keyframes focus {
+    0% {
+      opacity: .3;
+    }
+    100% {
+      opacity: 1;
+    }
+}
 @media only screen and (max-width: 400px) {
     header #topSection .content-wr #socials {
         display:none;
@@ -796,9 +804,7 @@ header {
 
     .content-wr {
 
-
-
-        .sandwichHeadLine{
+        .sandwichHeadLine {
             position: relative;
             text-align: center;
             flex-direction: column;
@@ -833,14 +839,14 @@ header {
 
         .thumbsCard {
             flex-direction: row;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             justify-content: space-around;
             text-align: center;
 
             .thumbs {
                 width: 25%;
                 flex-direction: column;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
 
@@ -869,8 +875,161 @@ header {
             }
             .sandwichCard {
                 width: 75%;
+                position: relative;
+	            align-self: center;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                margin: 0 auto;
+                text-align: center;
+                
+                .cardImage {
+                    border: solid 10px #fff;
+                    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+                    margin: 0 auto;
+                }
+                .textBg {
+                        position: absolute;
+                        right:10px;
+                        top:-10px;   
+                }
+                .infoText {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    right: 55px;
+                    text-align: center;
+                    
+                    span {
+                        text-transform: uppercase;
+	                    letter-spacing: 1px;
+	                    color: #a47d5e;
+	                    font-weight: 800;
+                    }
+                    h4  {
+                        font-size: 60px;
+                        margin: 0 auto;
+                    }
+                    .main{
+                            font-size:92px;
+                            font-weight: 700;
+                            line-height: 92px;
+                            margin-top: 5px;
+                            color: #dfc691;
+                        }
+                    p {
+                        font-size: 18px;
+                        line-height: 23px;
+                      
+                        letter-spacing: 1px;
+                      
+                        color: #979285;
+                    }   
+                }
+                button{
+                    position: absolute;
+                    bottom:-10px;
+                    left: 70px;	
+                    padding: 20px 30px;
+                    text-transform: uppercase;
+                    font-family: 'Alegreya',serif;
+                    color: #e1ca9a;
+                    border: dashed 1px #e1ca9a;
+                    background-color: #fff;
+                    font-size: 18px;
+                    font-weight: 700;
+                    position: absolute;
+                    width: 171px;
+                    padding: 20px;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    transition: transform 0.5s ease;
+
+                    &:hover{
+                        transform: translateY(-5px);
+                        outline: none;
+                    }
+                    
+                }
+                     
             }
         }
     }
+}
 
+@media only screen and (max-width: 900px) {
+    #sandwich .content-wr .thumbsCard .thumbs,
+    #sandwich .content-wr .thumbsCard .sandwichCard{
+        min-width: 100%;
+    }
+    #sandwich .content-wr .thumbsCard .sandwichCard button {
+        display: none;
+    }
+} 
+
+
+/* ---------------------------------------------- /*
+ * Footer
+/* ---------------------------------------------- */
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    background: #f3f1e9;
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+        li {
+            border-top: 1px solid #c2beba;
+            border-bottom: 1px solid #c2beba;
+            list-style-type: none;
+
+            a {
+                font-size: 14px;
+                line-height: 24px;
+                position: relative;
+                display: block;  
+                width: 171px;
+                padding: 25px;
+                text-align: center;
+                text-transform: uppercase;  
+                color: #56534c;
+                background: rgba(238, 236, 225, .7);
+            }
+        }
+
+        .logo {
+            border: none;
+
+            a {
+                width: auto;
+                padding: 23px 45px 0;
+                background: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    footer ul {
+        flex-direction: column;
+    }
+    footer ul li {
+        margin: 0 auto;
+    }   
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1050px){
+    footer ul li a {
+        width: 115px;
+        font-size: 12px;
+    }   
+} 
+@media only screen and (min-width: 701px) and (max-width: 1000px){
+    footer .logo {
+        display: none;
+    }
 }
