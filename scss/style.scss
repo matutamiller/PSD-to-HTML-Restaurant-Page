@@ -76,6 +76,7 @@ header {
                     background-size: cover;
                     height: 2.75em;
                     width: 8.75em;
+                    animation: focus 3s;
                 }
             }
              
@@ -272,6 +273,7 @@ header {
             padding-top: 70px;
             text-align: center;
             min-width: 50%;
+            animation: focus 3s;
 
             .sectionTitle {
                 font-size: 48px;
@@ -375,6 +377,7 @@ header {
                 outline: 5px solid white;
                 outline-offset: -10px;
                 background-size: contain;
+                transition: transform 0.5s ease;
 
                 &:nth-child(1) {
                     background: url("../imgs/img_top_left.png") no-repeat center ;
@@ -394,6 +397,11 @@ header {
                 &:nth-child(5) {
                     background: url("../imgs/img_bottom_right.png") no-repeat center ;
                     background-size: cover;
+                }
+                &:hover {
+                    transform: scale(1.2);
+                    z-index: 1;
+
                 }
             }
             .sogood {
@@ -1033,3 +1041,5 @@ footer {
         display: none;
     }
 }
+
+
